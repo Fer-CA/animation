@@ -1,0 +1,446 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #F2F3F4;
+}
+#Titulo {
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe2ef;
+    width: 100vw;
+}
+.barras {
+    padding-right: 4.5rem;
+    font-size: 1.5rem;
+}
+.iconos {
+    padding-left: 4.5rem;
+    font-size: 1.5rem;
+}
+.navbar {
+    grid-area: nav;
+    display: none;
+}
+.banner {
+    grid-area: banner;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    padding: 2rem;
+}
+.banner p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.banner button {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ae83d1;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease-out;
+}
+.banner button:hover {
+    background-color: #F2F3F4;
+}
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.card {
+    background-color: #ffa7b8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.card img {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+}
+.card img:hover {
+    transform: scale(1.1);
+}
+.card-body {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+.card:hover .card-body {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.card-body h5{
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+.card-body button {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ae83d1;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease-out;
+}
+.card-body button:hover {
+    background-color: #ffe2ef;
+}
+.card-body button a {
+    color: black;
+    text-decoration: none;
+}
+.page {
+    grid-area: page;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+}
+.page-item {
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.page-item:hover {
+    cursor: pointer;
+    color: #ae83d1;
+}
+#Suscripcion {
+    grid-area: suscripcion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe2ef;
+}
+#Suscripcion p {
+    padding: 2rem;
+}
+#Suscripcion button {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ae83d1;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease-out;
+    margin: 1.5rem;
+}
+#Suscripcion button:hover {
+    background-color: #F2F3F4;
+}
+#Suscripcion button a {
+    color: black;
+    text-decoration: none;
+}
+#Contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    height: 90%;
+}
+#Contacto fieldset {
+    width: 90%;
+    border: none;
+}
+#Contacto legend {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left: 5rem;
+}
+textarea {
+    margin-left: 4rem;
+    width: 50%;
+}
+fieldset div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.mensaje {
+    margin-top: 1.5rem;
+}
+.enviar {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ae83d1;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease-out;
+    margin: 1.5rem;
+}
+.enviar:hover {
+    background-color: #ffe2ef;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffe2ef;
+}
+.icono {
+    font-size: 1.7rem;
+    padding-top: 1.5rem;
+}
+.icono a {
+    color: #ae83d1;
+    text-decoration: none;
+}
+.icono i {
+    transform: scale(1);
+}
+.icono i:hover {
+    transform: scale(1.2);
+}
+body {
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "nav"
+    "banner"
+    "main"
+    "page"
+    "suscripcion"
+    "contacto"
+    "footer"
+    ;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.banner button {
+    animation: pulse 2s infinite; 
+}
+@media (min-width: 576px) and (max-width: 992px) {
+    
+    #Titulo {
+        width: 100vw;
+    }
+    h1 {
+        width: 70%;
+        padding-left: 22rem;
+    }
+    .barras {
+        display: none;
+    }
+    .iconos {
+        width: 30%;
+    }
+    .navbar {
+        width: 100%;
+        display: block;
+        background-color: #F2F3F4;
+        position: sticky;
+    }
+    .nav-container {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+        padding-right: 5rem;
+        
+    }
+    @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-500px);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        80% {
+          transform: translateY(-30px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        animation: bounceIn 1s ease;
+    }
+    .navbar-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 1.2rem;
+        font-weight: 700;
+        gap: 2rem;
+        width: 100%;
+       
+    }
+    .nav-link {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+    .nav-link:hover {
+        color: #ae83d1;
+        text-decoration: underline;
+    }
+    .buscador {
+        display: none;
+    }
+    #Libros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 2rem;
+    }
+   #Contacto legend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 18rem;
+   }
+   
+   .form-control1 {
+        width: 50%;
+   }
+}
+@media (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "nav banner"
+        "nav main"
+        "nav page"
+        "suscripcion suscripcion"
+        "contacto contacto"
+        "footer footer"
+        ;
+        grid-template-columns: 20% 1fr;
+        
+    }
+    
+    .barras {
+        display: none;
+    }
+    .navbar {
+        display: block;
+        height: 0vh;
+        
+    }
+    @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-500px);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        80% {
+          transform: translateY(-30px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    .navbar-brand img {
+        margin-left: 4rem;
+        margin-top: 1.5rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        animation: bounceIn 1s ease;
+    }
+    .navbar-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        font-size: 1.2rem;
+        font-weight: 700;
+        gap: 2rem;
+        
+    }
+    .nav-link {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+    .nav-link:hover {
+        color: #ae83d1;
+        text-decoration: underline;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2rem;
+    }
+    #Titulo {
+        width: 115vw;
+        background-color: #F2F3F4;
+        
+    }
+    h1 {
+        width: 80%;
+        padding-left: 50rem;
+    }
+    .iconos {
+        width: 20%;
+    }
+    #Contacto legend {
+        
+        padding-left: 40rem;
+   }
+   .form-control1 {
+        width: 50%;
+    }
+}
+    
+
+  
